@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FMImgPickerCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="compact_camera" translatesAutoresizingMaskIntoConstraints="NO" id="dyD-Va-Gjn">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fbL-CN-Aiy">
+                        <rect key="frame" x="74" y="3" width="23" height="23"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="fbL-CN-Aiy" secondAttribute="height" multiplier="1:1" id="hhh-Sh-J6P"/>
+                        </constraints>
+                    </imageView>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="videocamera" translatesAutoresizingMaskIntoConstraints="NO" id="I8N-nn-8rj">
+                        <rect key="frame" x="5" y="83" width="15" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="15" id="9MM-wq-AFG"/>
+                            <constraint firstAttribute="height" constant="12" id="wdE-nk-3ao"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时间" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NN0-QM-YpY">
+                        <rect key="frame" x="25" y="83" width="67" height="12"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRw-KD-MLU">
+                        <rect key="frame" x="50" y="0.0" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="NRw-KD-MLU" secondAttribute="height" id="4RJ-Fw-xi4"/>
+                        </constraints>
+                        <connections>
+                            <action selector="selectBtnClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="idt-72-jXd"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="NN0-QM-YpY" firstAttribute="height" secondItem="I8N-nn-8rj" secondAttribute="height" id="8at-xZ-X2M"/>
+                <constraint firstAttribute="trailing" secondItem="fbL-CN-Aiy" secondAttribute="trailing" constant="3" id="Dp7-lx-vgk"/>
+                <constraint firstItem="dyD-Va-Gjn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Kih-lq-2oJ"/>
+                <constraint firstItem="dyD-Va-Gjn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="MZZ-PZ-bIl"/>
+                <constraint firstItem="NRw-KD-MLU" firstAttribute="width" secondItem="dyD-Va-Gjn" secondAttribute="width" multiplier="1:2" id="Px8-Z9-y8S"/>
+                <constraint firstAttribute="bottom" secondItem="I8N-nn-8rj" secondAttribute="bottom" constant="5" id="Shd-Vs-ahG"/>
+                <constraint firstItem="fbL-CN-Aiy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3" id="X20-1u-uy2"/>
+                <constraint firstAttribute="trailing" secondItem="NRw-KD-MLU" secondAttribute="trailing" id="YA1-e0-GiM"/>
+                <constraint firstAttribute="bottom" secondItem="dyD-Va-Gjn" secondAttribute="bottom" id="YSw-cc-pEh"/>
+                <constraint firstAttribute="trailing" secondItem="NN0-QM-YpY" secondAttribute="trailing" constant="8" id="bYt-qr-Vko"/>
+                <constraint firstItem="fbL-CN-Aiy" firstAttribute="height" secondItem="dyD-Va-Gjn" secondAttribute="height" multiplier="1:4" constant="-2" id="blb-Y4-8CR"/>
+                <constraint firstAttribute="trailing" secondItem="dyD-Va-Gjn" secondAttribute="trailing" id="c74-eO-1IR"/>
+                <constraint firstItem="fbL-CN-Aiy" firstAttribute="width" secondItem="fbL-CN-Aiy" secondAttribute="height" multiplier="1:1" id="mfT-71-xO4"/>
+                <constraint firstItem="NN0-QM-YpY" firstAttribute="leading" secondItem="I8N-nn-8rj" secondAttribute="trailing" constant="5" id="mlW-45-cHz"/>
+                <constraint firstItem="NN0-QM-YpY" firstAttribute="top" secondItem="I8N-nn-8rj" secondAttribute="top" id="mxq-Kl-fFj"/>
+                <constraint firstItem="NRw-KD-MLU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="prN-G6-XMo"/>
+                <constraint firstItem="I8N-nn-8rj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="psD-oc-2Cf"/>
+            </constraints>
+            <size key="customSize" width="103" height="100"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="mfT-71-xO4"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="isChoosenImageView" destination="fbL-CN-Aiy" id="45y-at-gQS"/>
+                <outlet property="mainImageView" destination="dyD-Va-Gjn" id="TIX-hf-iTh"/>
+                <outlet property="selectBtn" destination="NRw-KD-MLU" id="osq-Ya-ILh"/>
+                <outlet property="videoCameraImgView" destination="I8N-nn-8rj" id="XM9-C9-Z1N"/>
+                <outlet property="vidoeDateLabel" destination="NN0-QM-YpY" id="nm2-Fi-41m"/>
+            </connections>
+            <point key="canvasLocation" x="252" y="224"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="compact_camera" width="28" height="20"/>
+        <image name="videocamera" width="12" height="9"/>
+    </resources>
+</document>
